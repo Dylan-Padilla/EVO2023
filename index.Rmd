@@ -1,0 +1,88 @@
+---
+title_textsize: "50pt"
+primary_colour: "black"
+secondary_colour: "black"
+accent_colour: "black"
+font_family: "Comic Sans MS"
+title: Dylan J. Padilla <img align = "right" src = "images/profile.png" height = "330px" width = "255px"> <br><br> `r icon_style(fontawesome("envelope", style = "solid"), scale = 0.5, fill = "gray")` dpadil10@asu.edu | `r icon_style(fontawesome("twitter", style = "brands"), scale = 0.5, fill = "skyblue")` <font size="6.9"> [Dylan_Padilla94](https://twitter.com/Dylan_Padilla94) </font> &nbsp; `r icon_style(fontawesome("school", style = "solid"), scale = 0.5, fill = "black")` <font size="6.9"> School of Life Sciences, Arizona State University, Tempe, AZ 85287 </font>
+affiliation:
+   - address: '<img align = "left" src = "images/Drosophila.png" height = "100px" width = "200px"><img align = "right" src = "images/Drosophila2.gif" height = "150px" width = "230px">'
+main_findings:
+  - 'The population genetics &nbsp;&nbsp; of foraging behavior'
+  - <img align = "left" src = "images/quality1.png" height = "600px" width = "600px">&nbsp;&nbsp;&nbsp;<img align = "center" src = "images/heatmap.png" height = "500px" width = "500px">&nbsp;&nbsp;<img align = "center" src = "images/distances2.png" height = "400px" width = "600px"><br><img align = "center" src = "images/flow.png" height = "290px" width = "2000px"><br><img align = "left" src = "images/quality2.png" height = "600px" width = "600px">&nbsp;&nbsp;<img align = "center" src = "images/admix.png" height = "600px" width = "600px">&nbsp;&nbsp;&nbsp;&nbsp;<img align = "center" src = "images/adaptation2.png" height = "600px" width = "400px"><br><img align = "center" src = "images/conclusion.png" height = "290px" width = "2000px">
+main_width: 0.5
+main_textcol: "orange"
+column_number: 1
+logoleft_name: '![](images/asu_logo.png){.main-img-left width=40%}<img align = "right" src = "images/evo2023-logo.png" height = "210px" width = "210px"> &nbsp;&nbsp;&nbsp;&nbsp; <img align = "right" src = "images/qrcode.png" height = "210px" width = "210px">'
+output: 
+  posterdown::posterdown_betterland:
+    self_contained: false
+    pandoc_args: --mathjax
+    highlight: haddock
+    number_sections: false
+link-citations: false
+bibliography: packages.bib
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(results = 'asis',
+                      echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      dpi = 300,
+                      out.width = "100%")
+options(knitr.table.format = "html")
+
+```
+
+
+<style>
+
+.main {
+font-family: "Comic Sans MS";
+}
+
+body {
+margin: 2cm;
+}
+
+.column {
+float: right;
+padding: 1cm;
+}
+
+.main p {
+padding-top: 0%;
+font-size: $if(main_textsize)$$main_textsize$$else$150px$endif$;
+text-align: left;
+}
+
+</style>
+
+<br>
+
+<center>
+
+`r colorize("**1.**", "red")` The Drosophila `r colorize("*foraging* gene", "orange")` provides an opportunity to understand the mechanisms underlying evolutionary responses to environmental variation
+
+<img align = "right" src = "images/for-gene.png" height = "100px" width = "1130px">
+![](images/larva2.gif){width=30%}
+![](images/paths.png){width=50%}
+
+`r colorize("**2.**", "red")` Given its allelic variants, one should expect geographic variation of the `r colorize("*for* gene", "orange")` among populations
+
+![](images/cline.png){width=60%}
+
+`r colorize("**3.**", "red")` The DEST dataset enables one to study genetic variation accross populations spanning America and Europe
+
+![](images/map-drosophila.png){width=102%}
+
+</center>
+
+
+
+
+
+

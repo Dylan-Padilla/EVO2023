@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Dylan J. Padilla       dpadil10@asu.edu |    Dylan_Padilla94       School of Life Sciences, Arizona State University, Tempe, AZ 85287 </title>
+
+
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Comic Sans MS' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 46in 32in;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 46in;
+height: 32in;
+text-align: justify;
+font-size: 45px;
+background-color: #FFFFFF;
+color: #000000;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r, pre.sourceCode.python {
+background-color: #ffffff20;
+border: solid black 1mm;
+border-radius: 0.5em;
+padding: 4mm;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+div.sourceCode {
+background-color: transparent;
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+}
+code.sourceCode.r, code.sourceCode.python {
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: black24;
+color: black;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: black20;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 46in;
+height: 32in;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 0.5;
+-moz-column-rule-width: 0.5;
+column-rule-width: 0.5;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+-webkit-column-gap: calc(0.5 * 100%);
+background-color: #ffffff;
+font-family: Comic Sans MS;
+color: #000000;
+}
+span.citation {
+  color: black;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: black;
+}
+#title {
+font-size: 50pt;
+text-align: left;
+margin: 0;
+line-height: 90%;
+border-bottom: 0;
+}
+#author {
+color: black;
+margin: 0;
+text-align: left;
+line-height: 65%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 1em;
+color: #00000060;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: black;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: black;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+}
+.outer h1 {
+text-align: center;
+margin-top: 0.5in;
+margin-bottom: 0.5in;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p {
+color: #000000;
+}
+.outer ol {
+text-align: left;
+}
+.main {
+width: calc(46in * 0.5);
+height: 32in;
+position: absolute;
+margin-left: calc(46in * ((1 - 0.5) / 2));
+background-color: black;
+color: orange;
+font-family: Special Elite;
+background-image: linear-gradient(black 50%, black);
+}
+.main strong {
+color: #FFFFFF;
+}
+img.main-img-left {
+width: 20%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+img.main-img-right {
+width: 18%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+padding-top: 20%;
+font-size: 170px;
+text-align: left;
+}
+.fab {
+color: #00000060;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000060;
+font-size: 35px;
+}
+.envelope {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.globe {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.github > .fab {
+color: #00000060;
+font-size: 40px;
+text-decoration: none;
+}
+.globetext {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 46in;
+height: 32in;
+padding: 0cm;
+background-color: #ffffff;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+.main p {
+  padding-left: 30mm;
+  padding-right: 30mm;
+}
+.main_pic {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orcid img {
+  width: 3%;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="column outer">
+<br>
+<div class="title section">
+<h1 id="title">Dylan J. Padilla <img align = "right" src = "images/profile.png" height = "330px" width = "255px"> <br><br> <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:gray;height:0.5em;" xmlns="http://www.w3.org/2000/svg"> <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg> <a href="mailto:dpadil10@asu.edu" class="email">dpadil10@asu.edu</a> | <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:skyblue;height:0.5em;" xmlns="http://www.w3.org/2000/svg"> <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg> <font size="6.9"> <a href="https://twitter.com/Dylan_Padilla94">Dylan_Padilla94</a> </font>   <svg viewBox="0 0 640 512" style="position:relative;display:inline-block;top:.1em;fill:black;height:0.5em;" xmlns="http://www.w3.org/2000/svg"> <path d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"></path></svg> <font size="6.9"> School of Life Sciences, Arizona State University, Tempe, AZ 85287 </font></h1>
+<br>
+
+
+<p id="affiliation" class="affiliation">
+<sup></sup> <img align = "left" src = "images/Drosophila.png" height = "100px" width = "200px"><img align = "right" src = "images/Drosophila2.gif" height = "150px" width = "230px">
+</p>
+
+</div>
+<style>
+
+.main {
+font-family: "Comic Sans MS";
+}
+
+body {
+margin: 2cm;
+}
+
+.column {
+float: right;
+padding: 1cm;
+}
+
+.main p {
+padding-top: 0%;
+font-size: $if(main_textsize)$$main_textsize$$else$150px$endif$;
+text-align: left;
+}
+
+</style>
+<p><br></p>
+<center>
+<p><span style="color: red;"><strong>1.</strong></span> The Drosophila <span style="color: orange;"><em>foraging</em> gene</span> provides an opportunity to understand the mechanisms underlying evolutionary responses to environmental variation</p>
+<p><img align = "right" src = "images/for-gene.png" height = "100px" width = "1130px">
+<img src="images/larva2.gif" style="width:30.0%" />
+<img src="images/paths.png" style="width:50.0%" /></p>
+<p><span style="color: red;"><strong>2.</strong></span> Given its allelic variants, one should expect geographic variation of the <span style="color: orange;"><em>for</em> gene</span> among populations</p>
+<p><img src="images/cline.png" style="width:60.0%" /></p>
+<p><span style="color: red;"><strong>3.</strong></span> The DEST dataset enables one to study genetic variation accross populations spanning America and Europe</p>
+<p><img src="images/map-drosophila.png" style="width:102.0%" /></p>
+</center>
+
+</div>
+<div class="main">
+<p>The population genetics    of foraging behavior<br><br> <img align = "left" src = "images/quality1.png" height = "600px" width = "600px">   <img align = "center" src = "images/heatmap.png" height = "500px" width = "500px">  <img align = "center" src = "images/distances2.png" height = "400px" width = "600px"><br><img align = "center" src = "images/flow.png" height = "290px" width = "2000px"><br><img align = "left" src = "images/quality2.png" height = "600px" width = "600px">  <img align = "center" src = "images/admix.png" height = "600px" width = "600px">    <img align = "center" src = "images/adaptation2.png" height = "600px" width = "400px"><br><img align = "center" src = "images/conclusion.png" height = "290px" width = "2000px"></p>
+<img src="images/asu_logo.png" class="main-img-left" style="width:40.0%" /><img align = "right" src = "images/evo2023-logo.png" height = "210px" width = "210px">      <img align = "right" src = "images/qrcode.png" height = "210px" width = "210px">
+
+</div>
+</div>
+
+
+
+</body>
+</html>
